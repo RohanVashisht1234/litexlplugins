@@ -1,10 +1,10 @@
 .dark {
-	background-color: #2b3035 !important;
+	background-color: #2c3137 !important;
 	color: white !important;
 }
 
 .menu {
-	background-color: #2b3035 !important;
+	background-color: #2c3137 !important;
 	color: white !important;
 }
 
@@ -78,4 +78,18 @@ body {
 .darker{
 	background-color: #212529 !important;
 	border:0 !important;
+	margin: 10px;
+	box-shadow: #000000 0px 0px 10px !important;
+}
+
+.darker:hover{
+	scale: 1.1;
+}
+
+code{
+	background-color: #3b3b3b !important;
+}
+
+.hero__plugins{
+	box-shadow: #000000 0 0 10px !important;
 }

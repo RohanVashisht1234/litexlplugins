@@ -1,4 +1,6 @@
 import { useEffect, useState } from "preact/compat";
+import { marked } from "marked";
+import * as DOMPurify from 'dompurify/dist/purify';
 
 export function Plugins() {
     const [compiledData, setCompiledData] = useState([]);
@@ -7,7 +9,7 @@ export function Plugins() {
         const fetchData = async () => {
             try {
                 const data = await getData();
-                const compiledData = compileData(data);
+                const compiledData = await compileData(data);
                 setCompiledData(compiledData);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -19,11 +21,13 @@ export function Plugins() {
 
     return (
         <section>
-            <div className="flex dark pt-60 center text-center">
-                <h1>Browse Plugins</h1>
-            </div>
-            <div className="dark flex justifyContent pb-40 mb-40">
-                <input className="dark adjusted-width" type="text" placeholder="Start typing" />
+            <div className="hero__plugins">
+                <div className="flex dark pt-60 center text-center">
+                    <h1>Browse Plugins</h1>
+                </div>
+                <div className="dark flex justifyContent pb-40 mb-40">
+                    <input className="dark adjusted-width" type="text" placeholder="Start typing" />
+                </div>
             </div>
             <div className="flex three space-evenly">
                 {compiledData}
@@ -32,7 +36,7 @@ export function Plugins() {
     );
 }
 
-function compileData(data) {
+async function compileData(data) {
     const generatedData = [];
     for (let i = 3; i < data.addons.length; i++) {
         const addon = data.addons[i];
@@ -42,9 +46,9 @@ function compileData(data) {
         generatedData.push(
             <article key={i} className="card darker content-fit adjusted-width">
                 <footer>
-                    <h3 style={{padding:"0"}}>{title}</h3>
+                    <h3 style={{ padding: "0" }}>{title}</h3>
                     <p>{id}</p>
-                    <p>{description}</p>
+                    <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(description.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/, ""))) }} ></p>
                     <button>View plugin</button>
                 </footer>
             </article>

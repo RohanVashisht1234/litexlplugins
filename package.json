@@ -7,6 +7,8 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
+		"dompurify": "^3.1.2",
+		"marked": "^12.0.2",
 		"picnic": "^7.1.0",
 		"preact": "^10.20.0",
 		"preact-iso": "^2.6.2",

@@ -15,7 +15,7 @@
 --lxl_caret: rgba(173,244,255,255);
 --lxl_selection: rgba(170,170,170,64);
 --lxl_background3: rgba(30,31,34,255);
---lxl_line_highlight: rgba(173,215,255,13);
+--lxl_line_highlight: #2b2d31;
 --lxl_accent: rgba(173,244,255,255);
 --lxl_guide_highlighting: rgba(85,85,85,187);
 --lxl_line_number2: rgba(85,85,85,255);
