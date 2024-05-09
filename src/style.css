@@ -93,3 +93,8 @@ code{
 .hero__plugins{
 	box-shadow: #000000 0 0 10px !important;
 }
+
+.description > a{
+	color:rgb(102, 219, 255) !important;
+	text-decoration: underline;
+}

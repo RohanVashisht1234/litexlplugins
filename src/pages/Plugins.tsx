@@ -48,7 +48,7 @@ async function compileData(data) {
                 <footer>
                     <h3 style={{ padding: "0" }}>{title}</h3>
                     <p>{id}</p>
-                    <p dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(description.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/, ""))) }} ></p>
+                    <p className="description" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(description.replace(/^[\u200B\u200C\u200D\u200E\u200F\uFEFF]/, "")), {ALLOWED_TAGS: ['a','code']}) }} ></p>
                     <button>View plugin</button>
                 </footer>
             </article>
