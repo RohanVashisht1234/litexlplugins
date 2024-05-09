@@ -1,0 +1,81 @@
+.dark {
+	background-color: #2b3035 !important;
+	color: white !important;
+}
+
+.menu {
+	background-color: #2b3035 !important;
+	color: white !important;
+}
+
+html,
+body {
+	background-color: #212529 !important;
+}
+
+* {
+	color: white !important;
+}
+
+.hero {
+	height: 50vh;
+}
+
+.middle {
+	align-items: center;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.hero-image {
+	height: 45vw;
+}
+
+.mainButton {
+	width: 250px !important;
+}
+
+.content-fit {
+	width: fit-content !important;
+}
+
+.mr-10 {
+	margin-right: 10px !important;
+}
+
+@media only screen and (max-width: 490px) {
+	.mr-10 {
+		margin-right: 0 !important;
+	}
+}
+
+.pt-60{
+	padding-top:60px !important;
+}
+
+.adjusted-width {
+	width: 500px !important;
+}
+
+.justifyContent{
+	justify-content: center;
+}
+
+.pb-40{
+	padding-bottom: 50px;
+}
+
+.space-evenly{
+	justify-content: space-evenly;
+}
+
+.mb-40{
+	margin-bottom: 50px;
+}
+
+.darker{
+	background-color: #212529 !important;
+	border:0 !important;
+}
