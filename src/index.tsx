@@ -10,6 +10,7 @@ import { Home } from "./pages/Home";
 import { NotFound } from "./pages/_404.jsx";
 import "./style.css";
 import { Plugins } from "./pages/Plugins";
+import { PluginSlug } from "./pages/PluginSlug"
 import "../node_modules/picnic/picnic.min.css";
 
 export function App() {
@@ -20,6 +21,7 @@ export function App() {
 				<Router>
 					<Route path="/" component={Home} />
 					<Route path="/plugins" component={Plugins} />
+					<Route path="/plugins/*" component={PluginSlug} />
 					<Route default component={NotFound} />
 				</Router>
 			</main>

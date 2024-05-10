@@ -1,10 +1,10 @@
 .dark {
-	background-color: #2c3137 !important;
+	background-color: #2c3237 !important;
 	color: white !important;
 }
 
 .menu {
-	background-color: #2c3137 !important;
+	background-color: #2c3237 !important;
 	color: white !important;
 }
 
@@ -13,12 +13,10 @@ body {
 	background-color: #212529 !important;
 }
 
-* {
-	color: white !important;
-}
 
 .hero {
 	height: 50vh;
+	color: white !important;
 }
 
 .middle {
@@ -51,50 +49,66 @@ body {
 	}
 }
 
-.pt-60{
-	padding-top:60px !important;
+.pt-60 {
+	padding-top: 60px !important;
 }
 
 .adjusted-width {
 	width: 500px !important;
 }
 
-.justifyContent{
-	justify-content: center;
+.justifyContent {
+	display: flex !important;
+	justify-content: center !important;
 }
 
-.pb-40{
+.pb-40 {
 	padding-bottom: 50px;
 }
 
-.space-evenly{
+.space-evenly {
 	justify-content: space-evenly;
 }
 
-.mb-40{
+.mb-40 {
 	margin-bottom: 50px;
 }
 
-.darker{
+.darker {
 	background-color: #212529 !important;
-	border:0 !important;
+	color: white !important;
+	border: 0 !important;
 	margin: 10px;
 	box-shadow: #000000 0px 0px 10px !important;
 }
 
-.darker:hover{
+.darker:hover {
 	scale: 1.1;
 }
 
-code{
+.description > code {
 	background-color: #3b3b3b !important;
 }
 
-.hero__plugins{
+.hero__plugins {
 	box-shadow: #000000 0 0 10px !important;
 }
 
-.description > a{
-	color:rgb(102, 219, 255) !important;
-	text-decoration: underline;
+.description>a {
+	color: rgb(102, 219, 255) !important;
+	text-decoration: underline !important;
+}
+
+.customButton {
+	background-color: #212529 !important;
+}
+
+.wfull{
+	width: 100%;
+}
+.codeblock{
+	background-color: #212529;
+	padding: 10px 20px 20px 25px;
+	box-shadow: #2a2a2a 0 0 10px;
+	font-family: monospace;
 }
