@@ -33,7 +33,7 @@ export function PluginSlug() {
                 const description = addon.description || "This plugin doesn't have a description.";
                 const title = addon.name || id[0].toUpperCase() + id.slice(1).replace("_", " ");
                 const version = addon.version;
-                const $codeString = "lpm install " + id;
+                const $codeString = "";
                 $setData(
                     <>
                         <div className="pt-60 dark flex center middle">
@@ -48,13 +48,11 @@ export function PluginSlug() {
                                 </div>
                                 <div className="text-center">
                                     <h2>Run the following to install:</h2>
-                                    <div class="tabs three">
+                                    <div class="tabs two">
                                         <input id='tab-1' type='radio' name='tabgroupB' checked />
                                         <label class="pseudo button toggle" htmlFor="tab-1">lpm</label>
                                         <input id='tab-2' type='radio' name='tabgroupB' />
                                         <label class="pseudo button toggle" htmlFor="tab-2">miq</label>
-                                        <input id='tab-3' type='radio' name='tabgroupB' />
-                                        <label class="pseudo button toggle" htmlFor="tab-3">Balloon</label>
                                         <div className="row wfull">
                                             <div className="wfull">
                                                 <div className="flex two center">
@@ -66,16 +64,15 @@ export function PluginSlug() {
 
                                             <div className="wfull">
                                                 <div className="flex two center">
-                                                    <span className="content-fit codeblock">
-                                                        <span style={{ "color": "#42c6ff" }}>$</span> <span style={{ "color": "#ff42ff" }}>miq</span> <span style={{ "color": "#ffee70" }}>install</span> <span style={{ "color": "#f77260" }}>{id}</span>
+                                                    <span className="content-fit codeblock text-left">
+                                                        <span style={{ "color": "#42c6ff" }}>local</span> <span style={{ "color": "#d4d4d4" }}>config</span> = <span style={{ "color": "#ff42ff" }}>require</span> <span style={{ "color": "#f5ef42" }}>'core.config'</span><br />
+
+                                                        <span style={{ "color": "#ffffff" }}>config</span>.<span style={{ "color": "#d4d4d4" }}>plugins</span>.<span style={{ "color": "#f5ef42" }}>miq</span>.<span style={{ "color": "#42c6ff" }}>plugins</span> = {"{"}<br />
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; <span style={{ "color": "#f5ef42" }}>'{id}'</span>,<br />
+                                                        &nbsp;&nbsp;&nbsp;&nbsp;...<br />
+                                                        {"}"}<br />
                                                     </span>
-                                                </div>
-                                            </div>
-                                            <div className="wfull">
-                                                <div className="flex two center">
-                                                    <SyntaxHighlighter className="content-fit" language="lua" style={a11yDark}>
-                                                        {$codeString}
-                                                    </SyntaxHighlighter>
                                                 </div>
                                             </div>
                                         </div>
